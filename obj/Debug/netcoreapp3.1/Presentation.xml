@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="M:Home_Loan_api.Controllers.AuthController.Register(Home_Loan_api.Models.RegisterModal)">
+             <summary>
+             Register a New User
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Auth
+                 {
+                     "email": "username@email.com",
+                     "name": "firstName LastName",
+                     "password": "Abcd@1234",
+                     "phone": "9876543210",
+                     "cityCode": "NDL",
+                     "stateCode": "DEL",
+                     "countryCode": "IND"
+                 }
+            
+             </remarks>
+             <param name="registerModal">A json objects that contains all feilds to create a user</param>
+             <returns>Action Result</returns>
+             <response code="201">User Created Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.AuthController.SignIn(Home_Loan_api.Models.SignInModal)">
+             <summary>
+             User SignIn
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 Post /Auth
+                 {
+                   email = "username@email.com",
+                   password= "Abcd@1234"
+                 }
+            
+             </remarks>
+             <param name="signInModal"></param>
+             <returns>Action Result</returns>
+             <response code="201">SignIn Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.AuthController.ChangePassword(Home_Loan_api.Models.PasswordResetModal)">
+             <summary>
+             Password Update
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 PUT /Auth
+                 {
+                     "Current Password": "Abcd@1234",
+                     "New Password": "Wxyz@5678",
+                 }
+            
+             </remarks>
+             
+             <param name="passwordReset"></param>
+             <returns>Action Result</returns>
+             <response code="200">Password Updated Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.CollateralController.GetAllCollateral">
+            <summary>
+            All Collaterals
+            </summary>
+            <returns>Action Result</returns>
+            <response code="200">Get All Collateral Successfully</response>
+            <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.CollateralController.AddCollateral(Home_Loan_api.Models.NewCollateralModal)">
+             <summary>
+             Add Collateral
+             </summary>
+            <remarks>
+             Sample request:
+            
+                 POST /Collateral
+                 {
+                     "collateralValue": 100000000,
+                     "collateralType": 0,
+                     "ownShare": 100
+                 }
+            
+             </remarks>
+             <param name="newCollateralModal"></param>
+             <returns>Action Result</returns>
+             <response code="201">Collateral Added Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.CollateralController.UpdateCollateral(System.String,Home_Loan_api.Models.NewCollateralModal)">
+             <summary>
+             Update Collateral
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 PUT /Collateral
+                {
+                     "Id = "string" ,
+                     "ownerName": "string",
+                     "collateralValue": 100000000,
+                     "collateralType": 0,
+                     "ownShare": 100
+                 }
+            
+             </remarks>
+             <param name="id"></param>
+             <param name="newCollateralModal"></param>
+             <returns>Object Result</returns>
+             <response code="201">Collateral Updated Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.CollateralController.DeleteCollateral(System.String)">
+             <summary>
+             Delete Collateral
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 DELETE /Collateral
+                 {
+                 }
+            
+             </remarks>
+             <param name="id"></param>
+             <returns>Object Result</returns>
+             <response code="201">Collateral deleted Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.NewLoan(Home_Loan_api.Models.NewLoanModal)">
+             <summary>
+             New Loan
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Loan
+                {
+                   "propertyAddress": "string",
+                   "propertySize": 100000000,
+                   "propertyCost": 100000000,
+                   "propertyRegistrationCost": 100000000,
+                   "monthlyFamilyIncome": 100000000,
+                   "otherIncome": 100000000,
+                   "loanAmount": 100000000,
+                   "loanDuration": 240
+                }
+             </remarks>   
+             <param name="loan"></param>
+             <returns>Action Result</returns>
+             <response code="200">New Loan Created Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.ApplyLoan(System.String)">
+             <summary>
+             Apply Loan
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Loan
+                {
+                }
+             </remarks>   
+             <param name="loanId"></param>
+             <returns>Action Result</returns>
+             <response code="200">Loan Applied Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.EditloanValues(System.String,Home_Loan_api.Models.ModifyLoanModal)">
+             <summary>
+             Edit Loan
+             </summary>
+              <remarks>
+             Sample request:
+            
+                 PATCH /Loan
+                {
+                   "propertyAddress": "string",
+                   "propertySize": 100000000,
+                   "propertyCost": 100000000,
+                   "propertyRegistrationCost": 100000000,
+                   "monthlyFamilyIncome": 100000000,
+                   "otherIncome": 100000000,
+                   "loanAmount": 100000000,
+                   "loanDuration": 240
+                   
+                }
+             </remarks>   
+             <param name="editvalues"></param>
+             <returns>Action Result</returns>
+             <response code="200">Loan Editted Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.GetLoan(System.String)">
+             <summary>
+             get a loan by loanId
+             </summary>
+              <remarks>
+             Sample request:
+            
+                 GET /LoanId
+                {
+                }
+             </remarks>   
+             <returns>Action Result</returns>
+             <response code="200"> Retrieve Loan Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.GetLoans">
+             <summary>
+             Get User Loans
+             </summary>
+               <remarks>
+             Sample request:
+            
+                 GET /Loan
+                {
+                }
+             </remarks>   
+             <returns>Action Result</returns>
+             <response code="200">Retrieve User loans Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.GetAllLoans">
+             <summary>
+             Get All Loans by Advisor
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET /Loan
+                 {
+                 }
+            
+             </remarks>
+             <returns>Action Result</returns>
+             <response code="200">Retrieve All Loans by Advisor Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.AddCollateral(System.String,Home_Loan_api.Models.AddLoanCollateralModal)">
+             <summary>
+             Add Collateral to Loan
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Add Collateral to Loan
+                 {
+                     "collateralId": "string"
+                 }
+            
+             </remarks>
+             <param name="loanCollateral"></param>
+             <returns>Object Result</returns>
+             <response code="201">Collateral Added Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.RemoveCollateralFromLoan(System.String,System.String)">
+             <summary>
+             Remove Collateral from Loan
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 DELETE / Collateral
+                 {
+                 }
+            
+             </remarks>
+             <param name="loanCollateralId"></param>
+             <returns>Object Result</returns>
+             <response code="201">Collateral Removed Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.GetCollateralInLoan(System.String)">
+             <summary>
+             Get all Collateral in Loan
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET / Collateral 
+                 {
+                 }
+            
+             </remarks>
+             <param name="loanId"></param>
+             <returns>Action Result</returns>
+             <response code="200">Retrieve all collateral in Loan Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.LoanStateChange(System.String,Home_Loan_api.Models.LoanStateChangeModal)">
+             <summary>
+             Loan State Change
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST / Loan State
+                 {
+                     "loanId": "string",
+                     "state"= 0,
+                     "notes": "string"
+                 }
+            
+             </remarks>
+             <param name="loanStateChange"></param>
+             <returns>Object Result</returns>
+             <response code="201">Loan State Change Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.LoanController.GetLoanStateHistory(System.String)">
+             <summary>
+             Get Loan State History
+             </summary>
+              <remarks>
+             Sample request:
+            
+                 GET /LoanId
+                {
+                }
+             </remarks>   
+             <returns>Action Result</returns>
+             <response code="200"> Retrieve Loan state Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.PromotionController.GetPromotion">
+             <summary>
+             Get Promotion
+             </summary>
+              <remarks>
+             Sample request:
+            
+                 GET /Promotion
+                 {   
+                 }
+              </remarks>   
+             <returns>Action Result</returns>
+             <response code="200">Retrieve Promotion Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.PromotionController.AddNewPromotion(Home_Loan_api.Models.PromotionModal)">
+             <summary>
+             New Promotion
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /Promotion
+                 {
+                    "start_date": "2023-04-11",
+                    "end_date": "2023-04-11",
+                    "message": "string",
+                    "type": 0
+                             
+                 }
+              </remarks>   
+             <param name="promotionModal"></param>
+             <returns>Action Result</returns>
+             <response code="201">New Promotion added Successfully</response>
+             <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.GetCountries">
+            <summary>
+            Get All Countries
+            </summary>
+            <returns>Action Result</returns>
+            <response code="200">Retrieve all Countries Successfully</response>
+            <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.AddCountry(Home_Loan_api.Models.CountryModal)">
+            <summary>
+            Adds a new country
+            </summary>
+            <param name="newCountry">The data for the new country.</param>
+            <returns>An ActionResult containing the result of the operation.</returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.GetCountry(System.String)">
+            <summary>
+            Get a single country by id
+            </summary>
+            <param name="countryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.UpdateCountry(System.String,Home_Loan_api.Models.CountryModal)">
+            <summary>
+            update a country
+            </summary>
+            <param name="id"></param>
+            <param name="country"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.DeleteCountry(System.String)">
+            <summary>
+            delete a country
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.GetStates(System.String)">
+            <summary>
+            Get all States in a country
+            </summary>
+            <param name="countryId"></param>
+            
+            <returns>Action Result</returns>
+            <response code="200">Retrieve all State Successfully</response>
+            <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.AddState(System.String,Home_Loan_api.Models.StateModal)">
+            <summary>
+            add state in a country
+            </summary>
+            <param name="countryId"></param>
+            <param name="newState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.GetState(System.String)">
+            <summary>
+            get state by its id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.UpdateState(System.String,Home_Loan_api.Models.StateModal)">
+            <summary>
+            update a state
+            </summary>
+            <param name="id"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.DeleteState(System.String)">
+            <summary>
+            delete a state
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.GetCities(System.String)">
+            <summary>
+            Get all cities in a state
+            </summary>  
+            <param name="stateId"></param>
+            
+            <returns>Action Result</returns>
+            <response code="200">Retrieve all Cities Successfully</response>
+            <response code="400">Bad Request</response>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.AddCity(System.String,Home_Loan_api.Models.CityModal)">
+            <summary>
+            add a city in a state
+            </summary>
+            <param name="stateId"></param>
+            <param name="newCity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.GetCity(System.String)">
+            <summary>
+            get city by city id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.UpdateCity(System.String,Home_Loan_api.Models.CityModal)">
+            <summary>
+            update city
+            </summary>
+            <param name="id"></param>
+            <param name="city"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Home_Loan_api.Controllers.StaticController.DeleteCity(System.String)">
+            <summary>
+            delete city
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
