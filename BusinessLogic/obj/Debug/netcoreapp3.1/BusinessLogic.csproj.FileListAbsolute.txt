@@ -1,0 +1,17 @@
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\BusinessLogic.deps.json
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\BusinessLogic.dll
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\BusinessLogic.pdb
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\Constants.dll
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\Logging.NLog.dll
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\Logging.NLog.pdb
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\bin\Debug\netcoreapp3.1\Constants.pdb
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.AssemblyInfo.cs
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.csproj.CopyComplete
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.dll
+C:\Users\piyushsaini\Source\Repos\dotnet_teamd_homeloan\Home Loan\BusinessLogic\obj\Debug\netcoreapp3.1\BusinessLogic.pdb
